@@ -27,9 +27,11 @@
                     <div class="sub-menu">
                         <ul>
                             {% if user.is_authenticated %}
+                            <li class='username'>Hello, <span>{{user.username}}</span></li>
+                            <li><a href="accounts/logout" alt="logout">LOG OUT</a></li>
                             {% else %}
-                            <li><a href="/accounts/login" alt="login">SIGN IN</a></li>
-                            <li><a href="/accounts/register" alt="register">REGISTER</a></li>
+                            <li><a href="accounts/login" alt="login">SIGN IN</a></li>
+                            <li><a href="accounts/register" alt="register">REGISTER</a></li>
                             <li><a href="">PROFILE</a></li>
                             {% endif %}
                         </ul>
