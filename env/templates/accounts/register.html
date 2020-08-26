@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'styles/register.css' %}" rel="stylesheet" type="text/css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <a href="/" class="logo" alt="home">UB Market</a>
+        </header>
+        <div class="flex-items">
+            <figure>
+                <form action="register" method="post">
+                    {% csrf_token %}
+                    <figcaption>Username</figcaption>
+                    <input type="text" name="username" required>
+                    <figcaption>Email</figcaption>
+                    <input type="email" name="email" required>
+                    <figcaption>Password</figcaption>
+                    <input type="password" name="password" required>
+                    <figcaption>Confirm password</figcaption>
+                    <input type="password" name="confirm password" required>
+                    <figcaption><hr></figcaption>
+                    <input class="button" type="Submit" value="Create Your Account">
+                </form>
+                <div>
+                    {% for message in messages %}
+                    <h3> {{message}}</h3>
+                    {% endfor %}
+                </div> 
+                <div class="sign-in">
+                    <p> Already have an account?</p>
+                    <a href="/accounts/login" alt="login">Sign In</a>
+                </div>
+            </figure>
+        </div>
+        <footer>
+            <hr>
+        </footer>    
+    </div>
+</body>
+</html>

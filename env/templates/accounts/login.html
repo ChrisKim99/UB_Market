@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'styles/login.css' %}" rel="stylesheet" type="text/css">
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <a href="/" class="logo" alt="home">UB Market</a>
+        </header>
+        <div class="flex-items">
+            <figure>
+                <form action="login" method="post">
+                    {% csrf_token %}
+                    <figcaption>Username</figcaption>
+                    <input type='text' name="username" required>
+                    <figcaption>Password</figcaption>
+                    <input type="password" name="password" required>
+                    <figcaption><hr></figcaption>
+                    <input class="button" type="Submit" value="Sign In">
+                </form>
+                <div class="register">
+                {% if messages %}
+                    {% for message in messages %}
+                    {{message}}
+                    {% endfor %}
+                {% endif %}
+                </div>
+                    <div class="register">
+                        <p> New to Second-Hand Market?</p>
+                    <a href="/accounts/register" alt="register">Register</a>
+                    </div>
+            </figure>
+        </div>    
+        <footer>
+            <hr>
+        </footer>
+    </div>
+</body>
+</html>

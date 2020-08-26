@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #f2f2f2;
+}
+
+nav{
+    background-color: #222222;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid red;
+    border-left: none;
+    border-right: none;
+    min-width: 1000px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li.logo{
+    font-size: 30px;
+    font-weight: 800;
+    flex-shrink: 0;
+    padding: 0px 30px 0 0;
+    text-decoration: none;
+}
+
+nav ul div.search-icon{
+    height: 40px;
+    width: 1000px;
+    display: inline-flex;
+    text-align: center;
+    background: #f2f2f2;
+    border-radius: 5px;
+    min-width: 400px;
+}
+
+nav ul li.btn{
+    width: 60px;
+    line-height: 40px;
+    border: 1px solid #cccccc;
+    border-radius:5px 0px 0px 5px;
+    cursor: pointer;
+}
+
+nav ul div.search-icon li.btn span{
+    color: #222222;
+    font-size: 18px;
+}
+
+nav ul div.search-icon input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    
+}
+
+nav ul div.search-icon .icon {
+    width: 60px;
+    line-height: 40px;
+    border: 1px solid #cccccc;
+    border-radius:0 5px 5px 0;
+    cursor: pointer;
+}
+
+nav ul div.search-icon .icon:hover{
+    background:#e6e6e6;
+}
+
+nav ul div.search-icon .icon span{
+    color: #222222;
+    font-size: 18px;
+}
+
+nav ul div.items{
+    padding: 0 25px;
+    display: inline-flex;
+}
+
+nav ul div.items a:hover{
+    color: cyan;
+}
+
+nav ul div.items a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 12px; 
+}
+
+.sub-menu{
+    display: none;
+}
+
+nav ul div.items ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    margin-left: -5px;
+}
+
+nav ul div.items li:hover .sub-menu ul{
+    display: block;
+
+}
+
+nav ul div.items li:hover .sub-menu ul li{
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+}
