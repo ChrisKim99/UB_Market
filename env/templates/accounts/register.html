@@ -1,31 +1,30 @@
+{% extends 'main/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% block title %}
     <link href="{% static 'styles/register.css' %}" rel="stylesheet" type="text/css">
     <title>Register</title>
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
     <div class="flex-container">
         <header>
-            <a href="/" class="logo" alt="home">UB Market</a>
+            <a href="/" class="logo" alt="home" style="color:#222222; font-size:50px;">UB Market</a>
         </header>
         <div class="flex-items">
             <figure>
                 <form action="register" method="post">
                     {% csrf_token %}
-                    <figcaption>Username</figcaption>
+                    <figcaption style="color:#222222;">Username</figcaption>
                     <input type="text" name="username" required>
-                    <figcaption>Email</figcaption>
+                    <figcaption style="color:#222222;">Email</figcaption>
                     <input type="email" name="email" required>
-                    <figcaption>Password</figcaption>
+                    <figcaption style="color:#222222;">Password</figcaption>
                     <input type="password" name="password" required>
-                    <figcaption>Confirm password</figcaption>
+                    <figcaption style="color:#222222;">Confirm password</figcaption>
                     <input type="password" name="confirm password" required>
                     <figcaption><hr></figcaption>
-                    <input class="button" type="Submit" value="Create Your Account">
+                    <input class="button" type="Submit" value="Create Your Account" style="color:#222222;">
                 </form>
                 <div>
                     {% for message in messages %}
@@ -33,8 +32,8 @@
                     {% endfor %}
                 </div> 
                 <div class="sign-in">
-                    <p> Already have an account?</p>
-                    <a href="/accounts/login" alt="login">Sign In</a>
+                    <p style="color:#222222;"> Already have an account?</p>
+                    <a href="/accounts/login" alt="login" style="color:#222222;">Sign In</a>
                 </div>
             </figure>
         </div>
@@ -42,5 +41,4 @@
             <hr>
         </footer>    
     </div>
-</body>
-</html>
+{% endblock %}

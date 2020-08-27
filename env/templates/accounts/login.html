@@ -1,27 +1,27 @@
+{% extends 'main/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+{% block title %}
     <link href="{% static 'styles/login.css' %}" rel="stylesheet" type="text/css">
     <title>Sign In</title>
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
     <div class="flex-container">
         <header>
-            <a href="/" class="logo" alt="home">UB Market</a>
+            <a href="/" class="logo" alt="home" style="color:#222222; font-size:50px;">UB Market</a>
         </header>
         <div class="flex-items">
             <figure>
                 <form action="login" method="post">
                     {% csrf_token %}
-                    <figcaption>Username</figcaption>
+                    <figcaption style="color:#222222;">Username</figcaption>
                     <input type='text' name="username" required>
-                    <figcaption>Password</figcaption>
+                    <figcaption style="color:#222222;">Password</figcaption>
                     <input type="password" name="password" required>
                     <figcaption><hr></figcaption>
-                    <input class="button" type="Submit" value="Sign In">
+                    <input class="button" type="Submit" value="Sign In" style="color:#222222;">
                 </form>
                 <div class="register">
                 {% if messages %}
@@ -31,8 +31,8 @@
                 {% endif %}
                 </div>
                     <div class="register">
-                        <p> New to Second-Hand Market?</p>
-                    <a href="/accounts/register" alt="register">Register</a>
+                        <p style="color:#222222;"> New to Second-Hand Market?</p>
+                    <a href="/accounts/register" alt="register" style="color:#222222;">Register</a>
                     </div>
             </figure>
         </div>    
@@ -40,5 +40,4 @@
             <hr>
         </footer>
     </div>
-</body>
-</html>
+{% endblock %}

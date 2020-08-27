@@ -1,50 +1,35 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'styles/index2.css' %}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <title>Second Hand Market</title>
-</head>
 <body>
-
     <header>
-        <div class="container">
-            <a href="" alt="home"><img src="{% static 'images/ubname.jpg' %}" alt="logo" class="logo"></a>
-            
-            <input type="search" name="search" placeholder="Search Item" class="search">
-               <div class="btn">
-                <a href=""><i class="fa fa-search"></i></a></div>
+        <div class="head-container">
+            <div class="logo">
+                <a href="/"><img src="{% static 'images/ubname.jpg' %}" alt="logo"></a>
+            </div>
+            <div class="search-box">
+                <input type="search">
+                <a class="search-button" href=""><i class="fa fa-search"></i></a>
+            </div>
             <nav>
                 <ul>
-                    <li>
-                        <a href="" alt="about">About</a> 
-                    </li>
-                    <li>
-                        <a href="" alt="accound">Account</a> 
-                    </li>
-                    <li>
-                        <a href="register/" alt="register">Register</a> 
-                    </li>
-                    <li>
-                        <a href="login/" alt="log_in">Log In</a>
-                    </li>
-                    <li>
-                        <a href="" alt="cart">Cart</a>
-                    </li>
-               </ul> 
+                    {% if user.is_authenticated %}
+                    <li class='username'>Hello, <span>{{user.username}}</span></li>
+                    <li><a href="accounts/logout" alt="logout">LOG OUT</a></li>
+                    {% else %}
+                    <li class='username'>Hello, Sign In</li>
+                    <li><a href="accounts/login" alt="login">LOG IN</a></li>
+                    {% endif %}
+                    <li><a href=""></a>ABOUT</li>
+                    <li><a href=""></a>CART</li>
+                </ul>
             </nav>
         </div>
     </header>
-
     <article>
+        <div class="ad">
+            
+        </div> 
+        <div class="body-container">
 
+        </div>
     </article>
-    <footer>
-
-    </footer>
+    
 </body>
-</html>

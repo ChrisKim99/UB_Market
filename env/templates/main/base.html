@@ -1,17 +1,20 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static 'styles/base.css'%}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles/base.css'%}">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Document</title>
+    {% block title %}
+    <title>Base</title>
+    {% endblock %}
 </head>
 <body>
     <nav>
         <ul>
-            <li class="logo"><a href="/">UB Market</a></li>
+            <li class="logo"><a href="/" style="text-decoration: none;">UB Market</a></li>
             <div class='search-icon'>
                 <li class="btn">
                     <span class="fas fa-bars"></span>
@@ -28,10 +31,10 @@
                         <ul>
                             {% if user.is_authenticated %}
                             <li class='username'>Hello, <span>{{user.username}}</span></li>
-                            <li><a href="accounts/logout" alt="logout">LOG OUT</a></li>
+                            <li><a href="/accounts/logout" alt="logout">LOG OUT</a></li>
                             {% else %}
-                            <li><a href="accounts/login" alt="login">SIGN IN</a></li>
-                            <li><a href="accounts/register" alt="register">REGISTER</a></li>
+                            <li><a href="/accounts/login" alt="login">SIGN IN</a></li>
+                            <li><a href="/accounts/register" alt="register">REGISTER</a></li>
                             <li><a href="">PROFILE</a></li>
                             {% endif %}
                         </ul>
@@ -43,5 +46,8 @@
             </div>
         </ul>
     </nav>
+    {% block content %}
+    
+    {% endblock %}
 </body>
 </html>
