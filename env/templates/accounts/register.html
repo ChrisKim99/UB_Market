@@ -1,8 +1,10 @@
 {% extends 'main/base.html' %}
-{% load static %}
+
+{% block head %}
+    <link href="{% static 'styles/register.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block title %}
-    <link href="{% static 'styles/register.css' %}" rel="stylesheet" type="text/css">
     <title>Register</title>
 {% endblock %}
 
@@ -28,13 +30,13 @@
                 </form>
                 <div>
                     {% for message in messages %}
-                    <h3> {{message}}</h3>
+                    {{message}}
                     {% endfor %}
                 </div> 
-                <div class="sign-in">
-                    <p style="color:#222222;"> Already have an account?</p>
-                    <a href="/accounts/login" alt="login" style="color:#222222;">Sign In</a>
-                </div>
+                    <div class="sign-in">
+                        <p style="color:#222222;"> Already have an account?</p>
+                        <a href="/accounts/login" alt="login" style="color:#222222;">Sign In</a>
+                    </div>
             </figure>
         </div>
         <footer>

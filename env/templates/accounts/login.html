@@ -2,8 +2,11 @@
 {% load static %}
 
 
-{% block title %}
+{% block head %}
     <link href="{% static 'styles/login.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block title %}
     <title>Sign In</title>
 {% endblock %}
 
@@ -24,15 +27,13 @@
                     <input class="button" type="Submit" value="Sign In" style="color:#222222;">
                 </form>
                 <div class="register">
-                {% if messages %}
                     {% for message in messages %}
                     {{message}}
                     {% endfor %}
-                {% endif %}
                 </div>
                     <div class="register">
                         <p style="color:#222222;"> New to Second-Hand Market?</p>
-                    <a href="/accounts/register" alt="register" style="color:#222222;">Register</a>
+                        <a href="/accounts/register" alt="register" style="color:#222222;">Register</a>
                     </div>
             </figure>
         </div>    

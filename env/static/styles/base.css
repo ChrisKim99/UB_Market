@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    
 }
 
 nav{
@@ -28,7 +27,7 @@ nav ul li.logo{
     font-weight: 800;
     flex-shrink: 0;
     padding: 0px 30px 0 0;
-
+    color:white;
 }
 
 nav ul div.search-icon{
@@ -61,8 +60,7 @@ nav ul div.search-icon input{
     padding: 0 10px;
     color: #000;
     font-size: 16px;
-    border-radius: 5px 0 0 5px;
-    
+    border-radius: 5px 0 0 5px; 
 }
 
 nav ul div.search-icon .icon {

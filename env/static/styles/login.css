@@ -22,7 +22,7 @@ body {
 }
 
 .flex-container header .logo {
-    font-size: 30px;
+    font-size: 100px;
     font-weight: 800;
     text-decoration: none;
 }
@@ -33,12 +33,12 @@ figcaption {
     font-weight: bold;
 }
 
-.flex-container .flex-items figure form input {
+input {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20px;
+    height: 40px;
     width: 350px;
     border-radius: 10px;
     margin: 15px;
@@ -52,7 +52,7 @@ figcaption {
     background-color: skyblue;
 }
 
-.register {
+.sign-in {
     display: flex;
     flex-direction: column;
     align-items: center;
