@@ -1,5 +1,5 @@
-UB_Market/env/accounts/urls.py
-UB_Market/env/accounts/utils.py
-UB_Market/env/accounts/views.py
-UB_Market/env/env/settings.py
-UB_Market/env/env/urls.py
+env/accounts/urls.py
+env/accounts/utils.py
+env/accounts/views.py
+env/env/settings.py
+env/env/urls.py
