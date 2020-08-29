@@ -1,0 +1,70 @@
+*{
+    font-style: sans-serif;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    }
+
+div .profile-box {   
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 1000px;
+    border-radius: 10px;
+    width:1600px;
+    border: 2px rgb(228, 222, 222) solid;
+}
+
+div .profile-box .main{
+    width: 90%;
+    border: 2px rgb(228, 222, 222) solid;
+    height: 325px;
+    border-radius: 10px;
+    margin: 23px 10px 0 10px;
+    min-width: 800px;
+}
+
+div.profile-box .main nav.main-head {
+    background: none;
+    border: none;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+div .profile-box .main nav.main-head ul {
+    display: inline-flex;
+}
+div .profile-box .main nav.main-head ul li {
+    list-style: none;
+}
+
+div .profile-box .main nav.main-head ul li.profile-picture img{
+    width:400px;
+    border-radius: 5px;
+}
+
+div .profile-box .main nav.main-head ul li.profile-items{
+    margin-top: 100px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+div .profile-box .main nav.main-head ul li.profile-items .name,.history,.email,.date{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+div .profile-box .main nav.main-head ul li p{
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 850px) {
+    div {
+        display: flex;
+        justify-content: left;
+        }
+}

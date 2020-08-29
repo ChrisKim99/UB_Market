@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-nav{
+nav.base {
     background-color: #222222;
     padding: 10px 10px 10px 40px;
     border: 1px solid red;
@@ -14,7 +14,7 @@ nav{
     min-width: 1000px;
 }
 
-nav ul{
+nav.base ul{
     display: flex;
     list-style: none;
     flex-wrap: nowrap;
@@ -22,7 +22,7 @@ nav ul{
     justify-content: space-between;
 }
 
-nav ul li.logo{
+nav.base ul li.logo{
     font-size: 30px;
     font-weight: 800;
     flex-shrink: 0;
@@ -30,7 +30,7 @@ nav ul li.logo{
     color:white;
 }
 
-nav ul div.search-icon{
+nav.base ul div.search-icon{
     height: 40px;
     width: 1000px;
     display: inline-flex;
@@ -40,7 +40,7 @@ nav ul div.search-icon{
     min-width: 400px;
 }
 
-nav ul li.btn{
+nav.base ul li.btn{
     width: 60px;
     line-height: 40px;
     border: 1px solid #cccccc;
@@ -48,12 +48,12 @@ nav ul li.btn{
     cursor: pointer;
 }
 
-nav ul div.search-icon li.btn span{
+nav.base ul div.search-icon li.btn span{
     color: #222222;
     font-size: 18px;
 }
 
-nav ul div.search-icon input{
+nav.base ul div.search-icon input{
     width: 100%;
     border: none;
     outline: none;
@@ -63,7 +63,7 @@ nav ul div.search-icon input{
     border-radius: 5px 0 0 5px; 
 }
 
-nav ul div.search-icon .icon {
+nav.base ul div.search-icon .icon {
     width: 60px;
     line-height: 40px;
     border: 1px solid #cccccc;
@@ -71,25 +71,25 @@ nav ul div.search-icon .icon {
     cursor: pointer;
 }
 
-nav ul div.search-icon .icon:hover{
+nav.base ul div.search-icon .icon:hover{
     background:#e6e6e6;
 }
 
-nav ul div.search-icon .icon span{
+nav.base ul div.search-icon .icon span{
     color: #222222;
     font-size: 18px;
 }
 
-nav ul div.items{
+nav.base ul div.items{
     padding: 0 25px;
     display: inline-flex;
 }
 
-nav ul div.items a:hover{
+nav.base ul div.items a:hover{
     color: cyan;
 }
 
-nav ul div.items a {
+nav.base ul div.items a {
     text-decoration: none;
     font-size: 18px;
     padding: 0 12px; 
@@ -99,18 +99,18 @@ nav ul div.items a {
     display: none;
 }
 
-nav ul div.items ul li:hover .sub-menu{
+nav.base ul div.items ul li:hover .sub-menu{
     display: block;
     position: absolute;
     margin-left: -5px;
 }
 
-nav ul div.items li:hover .sub-menu ul{
+nav.base ul div.items li:hover .sub-menu ul{
     display: block;
 
 }
 
-nav ul div.items li:hover .sub-menu ul li{
+nav.base ul div.items li:hover .sub-menu ul li{
     padding: 10px;
     border-bottom: 1px dotted #fff;
     background: transparent;

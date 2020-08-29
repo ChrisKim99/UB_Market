@@ -8,3 +8,7 @@ def index(request):
 # as specified in the seetings of main, the function will render pages from the templates
 # can return some value {"name": "value to return"}
     return render(request, 'main/index.html')
+
+def profile(request):
+
+    return render(request, 'main/profile.html')

@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'styles/profile.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block title %}
+    <title>Profile</title>
+{% endblock %}
+
+{% block content %}
+
+<div>
+    <div class="profile-box">
+        <div class="main"> 
+            <nav class="main-head">
+                <ul>
+                    <li class="profile-picture"><img src="{% static 'images/profile.jpg' %}"></li>
+                    <li class="profile-items">
+                        <p class="name">Sooseok</p>
+                        <p class="date">Date Joined: 2020/08/29</p>
+                        <p class="history">5 Transaction Completed</p>
+                        <p class="email">Review</p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sub">
+            <nav class="sub-head">
+                <ul>
+                    <li class="email"></li>
+                    <li class="phone"></li>
+                    <li class="address"></li>
+                    <li class="delete"></li>
+                </ul>
+            </nav>
+        </div> 
+    </div> 
+</div>
+
+{% endblock %}

@@ -33,7 +33,7 @@ figcaption {
     font-weight: bold;
 }
 
-input {
+.flex-container .flex-items figure form input {
     display: flex;
     flex-direction: column;
     justify-content: center;
