@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{% static 'styles/base.css'%}">
-    <link rel="stylesheet" href="{% static 'styles/ad.css'%}">
+    <link rel="stylesheet" href="{% static 'styles/main/base.css'%}">
+    <link rel="stylesheet" href="{% static 'styles/main/ad.css'%}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -35,11 +35,11 @@
                             {% if user.is_authenticated %}
                             <li class='username'> <p style="color:skyblue; font-weight: 600; font-size:20px;"> Hello, <span>{{user.username}}</span></p></li>
                             <li><a href="/accounts/logout" alt="logout">LOG OUT</a></li>
-                            <li><a href="/profile" alt="profile">PROFILE</a></li>
+                            <li><a href="/accounts/profile" alt="profile">PROFILE</a></li>
                             {% else %}
                             <li><a href="/accounts/login" alt="login">SIGN IN</a></li>
                             <li><a href="/accounts/register" alt="register">REGISTER</a></li>
-                            <li><a href="/profile" alt="profile">PROFILE</a></li>
+                            <li><a href="/accounts/profile" alt="profile">PROFILE</a></li>
                             {% endif %}
                         </ul>
                     </div>

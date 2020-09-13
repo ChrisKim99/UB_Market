@@ -3,7 +3,7 @@
 
 
 {% block head %}
-    <link href="{% static 'styles/login.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'styles/accounts/login.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block title %}
@@ -19,8 +19,10 @@
             <figure>
                 <form action="login" method="post">
                     {% csrf_token %}
-                    <figcaption style="color:#222222;">Username</figcaption>
-                    <input type='text' name="username" required>
+                    <figcaption style="color:#222222;">First name</figcaption>
+                    <input type='text' name="first_name" required>
+                    <figcaption style="color:#222222;">Email</figcaption>
+                    <input type='text' name="email" placeholder="UB email is required"required>
                     <figcaption style="color:#222222;">Password</figcaption>
                     <input type="password" name="password" required>
                     <figcaption><hr></figcaption>

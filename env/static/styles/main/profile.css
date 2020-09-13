@@ -1,0 +1,83 @@
+*{
+    font-style: sans-serif;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: center;
+    }
+
+.profile-container .profile-box {
+    justify-content: center;
+    margin-top: 30px;
+    height: 1000px;
+    border-radius: 10px;
+    width:1600px;
+    border: 2px rgb(228, 222, 222) solid;
+}
+
+.profile-container .profile-box .main{
+    width: 98%;
+    border: 2px rgb(228, 222, 222) solid;
+    border-radius: 10px;
+    margin: 20px 10px 0 14px;
+    min-width: 800px;
+}
+
+.profile-container .profile-box .main .main-head {
+    background: none;
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.profile-container .profile-box .main .main-head ul {
+    display: inline-flex;
+}
+.profile-container .profile-box .main .main-head ul li {
+    list-style: none;
+}
+
+.profile-container .profile-box .main .main-head ul li.profile-picture img{
+    width:400px;
+    border-radius: 5px;
+}
+
+.profile-container .profile-box .main .main-head ul li.profile-items{
+    margin-top: 100px;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+
+.profile-container .profile-box .main .main-head ul li.profile-items .name,.history,.email,.date{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.profile-container .profile-box .main .main-head ul li p{
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 850px) {
+    .profile-container {
+        justify-content: left;
+        }
+}
+
+.sub {
+    margin: 10px 0 0 40px;
+}
+
+.sub nav.sub-head{
+    margin-right: auto;
+}
+
+.sub nav.sub-head ul{
+    list-style: none;
+}
+
+.sub nav.sub-head ul li{
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: 800;
+}

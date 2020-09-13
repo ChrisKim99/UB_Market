@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block head %}
-    <link href="{% static 'styles/register.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'styles/accounts/register.css' %}" rel="stylesheet" type="text/css">
+    <script defer src="{% static 'styles/accounts/warning.js' %}"></script>
 {% endblock %}
 
 {% block title %}
@@ -16,18 +17,20 @@
         </header>
         <div class="flex-items">
             <figure>
-                <form action="register" method="post">
+                <form id='form' action="register" method="post">
                     {% csrf_token %}
-                    <figcaption style="color:#222222;">Username</figcaption>
-                    <input type="text" name="username" required>
+                    <figcaption style="color:#222222;">First name</figcaption>
+                    <input id='first_name' type="text" name="first_name" required>
+                    <figcaption style="color:#222222;">Last name</figcaption>
+                    <input id='last_name' type="text" name="last_name" required>
                     <figcaption style="color:#222222;">Email</figcaption>
-                    <input type="email" name="email" required>
+                    <input id='email' type="email" name="email" placeholder="UB email is required" required>
                     <figcaption style="color:#222222;">Password</figcaption>
-                    <input type="password" name="password" required>
+                    <input id='password' type="password" name="password" required>
                     <figcaption style="color:#222222;">Confirm password</figcaption>
-                    <input type="password" name="confirm password" required>
+                    <input id='confirm password' type="password" name="confirm password" required>
                     <figcaption><hr></figcaption>
-                    <input class="button" type="Submit" value="Create Your Account" style="color:#222222;">
+                    <input class="button" type="submit" value="Create Your Account" style="color:#222222;">
                 </form>
                 <div>
                     {% for message in messages %}
